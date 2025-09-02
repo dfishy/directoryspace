@@ -43,11 +43,11 @@ long dirSpace(char* topDir)
             continue;
         }
 
-        // if entry is a file
+        // if entry is a file, add to size
         if (S_ISREG(fileStats.st_mode)) {
             tempSum += fileStats.st_size;
         }
-        // if entry is a directory
+        // if entry is a directory, recurse
         if (S_ISDIR(fileStats.st_mode)) {
             tempSum += dirSpace(pathName);  
         }

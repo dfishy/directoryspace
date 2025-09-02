@@ -9,7 +9,7 @@ public class dirSpace {
 
     // recursive function 
     public static long getSize(File dir) {
-        // variables
+        // variable
         long tempSum = 0;
 
         // if is a file, add to sum
@@ -18,7 +18,7 @@ public class dirSpace {
 
         // if is a directory, recurse
         } else if (dir.isDirectory()) {
-
+            
             File[] files = dir.listFiles();
             if (files != null) {
                 for (File file : files) {
